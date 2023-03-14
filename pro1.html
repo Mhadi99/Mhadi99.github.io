@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Page d'accueil avec diaporama</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<!-- Custom CSS -->
+	<style>
+		.carousel-item {
+			height: 80vh;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.carousel-caption {
+			top: 50%;
+			transform: translateY(-50%);
+			color: #fff;
+			text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+		}
+		h1 {
+			font-size: 5rem;
+		}
+		p {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">Mon Site</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">À propos</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Contact</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<!-- Diaporama -->
+	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active" style="background-image: url('https://via.placeholder.com/1200x800')">
+	      <div class="carousel-caption">
+	        <h1>Bienvenue sur notre site web</h1>
+	        <p>Le meilleur endroit pour trouver ce que vous cherchez</p>
+	      </div>
+	    </div>
+	    <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x800')">
+	      <div class="carousel-caption">
+	        <h1>Découvrez nos produits</h1>
+	        <p>Nous avons une large sélection de produits pour répondre à vos besoins</p>
+	      </div>
+	    </div>
+	    <div
+    class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x800')">
+      <div class="carousel-caption">
+        <h1>Contactez-nous</h1>
+        <p>N'hésitez pas à nous contacter pour toute question ou commentaire</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Précédent</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Suivant</span>
+  </a>
+</div>
+<!-- À propos -->
+<div class="container my-5">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>À propos</h2>
+			<p>Nous sommes une entreprise spécialisée dans la vente de produits de qualité à des prix compétitifs. Notre équipe est dédiée à fournir un excellent service à la clientèle et à s'assurer que nos clients sont satisfaits de leur achat. Nous offrons une garantie de satisfaction à 100% sur tous nos produits. N'hésitez pas à nous contacter si vous avez des questions ou des commentaires.</p>
+		</div>
+	</div>
+</div>
+<!-- Contact -->
+<div class="container my-5">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Contact</h2>
+			<form>
+			  <div class="form-group">
+			    <label for="name">Nom complet</label>
+			    <input type="text" class="form-control" id="name" placeholder="Entrez votre nom complet">
+			  </div>
+			  <div class="form-group">
+			    <label for="email">Adresse email</label>
+			    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+			    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre adresse email avec qui que ce soit.</small>
+			  </div>
+			  <div class="form-group">
+			    <label for="message">Message</label>
+			    <textarea class="form-control" id="message" rows="3"></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-primary">Envoyer</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Pied de page -->
+<footer class="bg-dark text-white py-3">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<p>© 2023 Bootstrap</p>
+		</div>
+	</div>
+</div>
+</footer>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
